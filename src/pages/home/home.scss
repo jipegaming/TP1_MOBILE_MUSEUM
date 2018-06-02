@@ -46,15 +46,23 @@ page-home {
         animation-delay: 1s;
     }
 
-    /* Card Oeuvres */
-    ion-card-content {
-        background-color: #f0a569;
+    /* Oeuvres */
+    .item-ios {
+        background-color: #ff7a22;
         position: relative;
         text-align: center;
     }
-    .card-title, .qr-code {
-        color: snow;
+    .item-ios h2 {
+        color: white;
+        font-size: 1.5rem;
+        text-shadow: 1px 1px 5px black;
     }
-
-
+    .item-ios p {
+        color: rgb(250, 209, 156);
+        font-size: 1.4rem;
+        text-shadow: 1px 1px 5px black;
+    }
+    .ion-ios-checkmark-circle {
+        color: rgb(117, 252, 151);
+    }
 }

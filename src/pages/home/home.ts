@@ -24,7 +24,7 @@ export class HomePage {
     setTimeout(() => {
       this.splash = false;
       this.tabBarElement.style.display = 'flex';
-    }, 5000);
+    }, 3000);
   }
 
 
