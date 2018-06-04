@@ -50,10 +50,7 @@ export class TabsPage {
 
   /* Rediriger le scan vers l'url */
   public openUrl() {
-    this.optionsIab = {
-      toolbar: 'yes',
-    };
-    this.iab.create(this.url + this.result.text, '_self', this.optionsIab);
+    this.iab.create(this.url + this.result.text, '_system', this.optionsIab);
   }
 
 }
