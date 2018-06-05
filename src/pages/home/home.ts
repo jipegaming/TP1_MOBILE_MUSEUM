@@ -16,6 +16,7 @@ export class HomePage {
   /* Concernant Sqlite */
   private db: SQLiteObject;
   oeuvresData: string[] = [];
+  maxOeuvres: string;
 
   /* Animated Ionic Splash Page */
   tabBarElement: any;
@@ -114,6 +115,7 @@ export class HomePage {
       .then((allData) => {
         console.log('Données: ', allData);
         console.log(allData.rows.item[0]);
+        this.totalOeuvres();
         if (allData == null) {
           console.log('Données Null!');
           return;
@@ -129,12 +131,16 @@ export class HomePage {
   }
 
   /* Afficher le total des oeuvres */
-  /* public totalOeuvres() {
-    this.db.executeSql('SELECT COUNT(id) AS total FROM `oeuvres`', {})
+  public totalOeuvres() {
+    this.db.executeSql('SELECT COUNT(id) AS seen FROM `oeuvres`', {})
       .then((total) => {
-        console.log('Vous avez: ', total, ' oeuvres!');
+        this.maxOeuvres = total.rows.item(0).seen;
+        console.log('Vous avez: ', this.maxOeuvres, total.row.item(1));
       })
       .catch(e => console.log(e));
-  } */
+  }
+
+  /* Afficher le total des oeuvres checked */
+  
 
 }
